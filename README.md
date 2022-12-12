@@ -3,6 +3,7 @@ Reddit for Alfred
 =================
 
 Find subreddits and browse hot posts on [Reddit][reddit].
+
 Original by Dean Jackson ([@deanishe](https://github.com/deanishe))
 
 
@@ -14,7 +15,6 @@ Download
 
 Get Reddit for Alfred from [GitHub][gh-releases].
 
-**Note**: Version 1.4 (and above) is *not* compatible with Alfred 2. Please download [v1.3][v13] if you're using Alfred 2.
 
 
 Usage
