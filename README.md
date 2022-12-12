@@ -3,6 +3,8 @@ Reddit for Alfred
 =================
 
 Find subreddits and browse hot posts on [Reddit][reddit].
+Original by Dean Jackson ([@deanishe](https://github.com/deanishe))
+
 
 ![][demo]
 
@@ -61,6 +63,13 @@ Set `NSFW` to `1` to include subreddits marked "over 18" in search results.
 Set `QUICKLOOK_POST` to `1` for the Quick Look preview to show the article instead of the Reddit comment page.
 
 
+Releases
+----------------------
+- Dec 2022: Version 2.0 (Python 3, Alfred 5)
+
+
+
+
 Licensing, thanks etc.
 ----------------------
 
@@ -75,7 +84,7 @@ It's heavily based on [Alfred-Workflow][alfred-workflow], also [MIT-licensed][mi
 [mit]: http://opensource.org/licenses/MIT
 [alfred-workflow]: http://www.deanishe.net/alfred-workflow/
 [logo-source]: https://github.com/FortAwesome/Font-Awesome/issues/372
-[gh-releases]: https://github.com/deanishe/alfred-reddit/releases
-[demo]: https://raw.githubusercontent.com/deanishe/alfred-reddit/master/demo.gif
+[gh-releases]: https://github.com/giovannicoppola/alfred-reddit/releases
+[demo]: demo.gif
 [v13]: https://github.com/deanishe/alfred-reddit/releases/tag/v1.3
-[config-sheet]: https://www.alfredapp.com/help/workflows/advanced/variables/#environment
+[config-sheet]: https://www.alfredapp.com/help/workflows/workflow-configuration

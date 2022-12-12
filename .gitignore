@@ -1,3 +1,8 @@
+.DS_Store
+*.pyc
+__pycache__
+prefs.plist
+lib
 .ipynb_checkpoints/
 *.ipynb
 *.dist-info/

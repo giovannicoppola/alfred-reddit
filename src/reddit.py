@@ -1,4 +1,5 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 # encoding: utf-8
 #
 # Copyright (c) 2014 deanishe@deanishe.net
@@ -32,7 +33,8 @@ Options:
 from __future__ import print_function, unicode_literals, absolute_import
 
 from datetime import datetime
-from HTMLParser import HTMLParser
+from html.parser import HTMLParser
+import html
 from functools import partial
 import os
 import re
@@ -72,13 +74,12 @@ TOP_COUNT = 500
 NSFW = os.getenv('NSFW', '0').lower() in ('1', 'true', 'yes', 'on')
 
 # GitHub update settings
-UPDATE_SETTINGS = {'github_slug': 'deanishe/alfred-reddit'}
 
-HELP_URL = 'https://github.com/deanishe/alfred-reddit'
+HELP_URL = 'https://github.com/giovannicoppola/alfred-reddit'
 
 
 ICON_REDDIT = 'icon.png'
-ICON_UPDATE = 'update-available.png'
+
 
 # JSON list of hot posts in subreddit
 HOT_POSTS_URL = 'https://www.reddit.com/r/{name}/hot.json'
@@ -156,8 +157,9 @@ def relative_time(timestamp):
 
 def decode_html_entities(s):
     """Decode HTML entities into Unicode."""
-    h = HTMLParser()
-    return h.unescape(s)
+    
+    #h = HTMLParser()
+    return html.unescape(s)
 
 
 def subreddit_from_env():
@@ -448,7 +450,7 @@ def show_search(name, nsfw=NSFW):
     # Load cached results for name or start search in background
     cached = wf.cached_data(key, None, SEARCH_CACHE_MAX_AGE) or []
     if not cached and not is_running('search'):
-        run_in_background('search', ['/usr/bin/python', 'reddit.py',
+        run_in_background('search', ['python3', 'reddit.py',
                           '--search', name.encode('utf-8')])
         wf.rerun = 0.3
 
@@ -643,7 +645,7 @@ def main(wf):
     # Update cached list of top subreddits
     if not is_running('top') and \
             not wf.cached_data_fresh('__top', TOP_CACHE_MAX_AGE):
-        run_in_background('top', ['/usr/bin/python', 'reddit.py', '--update'])
+        run_in_background('top', ['python3', 'reddit.py', '--update'])
 
     ####################################################################
     # Script Filter
@@ -687,7 +689,7 @@ def main(wf):
 
 
 if __name__ == '__main__':
-    wf = Workflow3(help_url=HELP_URL,
-                   update_settings=UPDATE_SETTINGS)
+    wf = Workflow3(help_url=HELP_URL
+                   )
     log = wf.logger
     sys.exit(wf.run(main))
