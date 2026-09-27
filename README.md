@@ -6,6 +6,11 @@ Find subreddits and browse hot posts on [Reddit][reddit].
 
 Original by Dean Jackson ([@deanishe](https://github.com/deanishe))
 
+<a href="https://github.com/giovannicoppola/alfred-reddit/releases/latest/">
+<img alt="Downloads"
+src="https://img.shields.io/github/downloads/giovannicoppola/alfred-reddit/total?color=purple&label=Downloads"><br/>
+</a>
+
 
 ![][demo]
 
