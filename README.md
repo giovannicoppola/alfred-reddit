@@ -2,6 +2,12 @@
 Reddit for Alfred
 =================
 
+> **⚠️ This workflow no longer works and is retired (September 2026).**
+> Reddit now blocks anonymous access to the JSON endpoints it relies on: requests
+> return `403 Blocked` or redirect to a login page, so subreddit search and
+> browsing fail. It would need to be rebuilt on Reddit's authenticated API, and
+> there are no plans to do that.
+
 Find subreddits and browse hot posts on [Reddit][reddit].
 
 Original by Dean Jackson ([@deanishe](https://github.com/deanishe))
